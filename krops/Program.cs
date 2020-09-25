@@ -12,18 +12,20 @@ namespace krops
         {
             try
             {
-                Console.WriteLine("Введите первое число:");
+                Console.WriteLine("Введите число a:");
                 double a = double.Parse(Console.ReadLine());
-                Console.WriteLine("Введите второе число:");
+                Console.WriteLine("Введите число b:");
                 double b = double.Parse(Console.ReadLine());
-                double sa = (a * a * a + b * b * b) / 2;
-                double sg = Math.Sqrt((Math.Abs(a) + Math.Abs(b)) / 2);
-                Console.WriteLine
-
-
-
-
-
+                Console.WriteLine("Введите высоту (H):");
+                double H = double.Parse(Console.ReadLine());
+                double S = (a + b) * H / 2;
+                Console.WriteLine("Площадь трапеции:{0:F2}", S);
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.ReadKey();
+        }
     }
 }
